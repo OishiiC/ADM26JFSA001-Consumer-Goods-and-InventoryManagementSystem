@@ -73,8 +73,8 @@ public class OrderController {
         }
     }
     
-    @PutMapping("/{id}/status")
-    @PreAuthorize("hasRole('ADMIN')")
+@PutMapping("/{id}/status")
+@PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<OrderDTO> updateOrderStatus(
             @PathVariable UUID id,
             @Valid @RequestBody UpdateOrderStatusRequest request) {
