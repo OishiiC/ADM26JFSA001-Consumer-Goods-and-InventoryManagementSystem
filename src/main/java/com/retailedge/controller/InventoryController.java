@@ -37,7 +37,7 @@ public class InventoryController {
         }
     }
     
-    @PutMapping("/{productId}/threshold")
+@PutMapping("/{productId}/threshold")
     public ResponseEntity<InventoryItemDTO> updateLowStockThreshold(
             @PathVariable UUID productId,
             @Valid @RequestBody UpdateThresholdRequest request) {
